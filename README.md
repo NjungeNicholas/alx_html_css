@@ -1,4 +1,6 @@
-# 🎧 Headphones Landing Page – Figma Implementation
+# alx_html_css
+
+## 🎧 Headphones Landing Page – Figma Implementation
 
 This project is a front-end implementation of a responsive landing page design for a headphone product. The original design was created in **Figma** by Nicolas Philipot, UI/UX DESIGNER, and this repository focuses on bringing that design to life using modern web technologies.
 
