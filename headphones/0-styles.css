@@ -1,0 +1,106 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('assets/fonts/source-sans-pro/SourceSansPro-Black.otf') format('.otf')
+}
+
+@font-face {
+    font-family: 'Spin Cycle OT';
+    src: url('assets/fonts/Spin-Cycle-OT/spincycle_ot.otf') format('.otf')
+}
+
+header {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.hero-piece {
+    position: relative;
+    background-image: url('assets/images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    width: 100%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.nav-links a:hover {
+    color: #ff6565;
+}
+
+.logo {
+    height: 40px;
+}
+
+.hero-content {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    margin-bottom: 20px;
+}
+
+.hero-content button {
+    background-color: #ff6565;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;
+}
+
+.hero-content button:hover {
+    opacity: 0.9;
+}
+
+.hero-text {
+    margin-top: 30px;
+    max-width: 800px;
+    font-size: 1rem;
+}
