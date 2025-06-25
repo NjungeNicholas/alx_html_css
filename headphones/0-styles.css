@@ -7,6 +7,11 @@
     font-family: 'Spin Cycle OT';
     src: url('assets/fonts/Spin-Cycle-OT/spincycle_ot.otf') format('.otf')
 }
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+}
 
 header {
     font-family: 'Source Sans Pro', sans-serif;
@@ -20,18 +25,6 @@ header {
     height: 100vh;
     color: white;
     text-align: center;
-    padding: 0 20px;
-    width: 100%;
-}
-
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
 }
 
 nav {
@@ -64,7 +57,7 @@ nav {
 }
 
 .hero-content {
-    margin-top: 100px;
+    margin-top: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
