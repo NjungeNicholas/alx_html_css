@@ -7,10 +7,11 @@
     font-family: 'Spin Cycle OT';
     src: url('assets/fonts/Spin-Cycle-OT/spincycle_ot.otf') format('.otf')
 }
- * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 header {
@@ -26,6 +27,21 @@ header {
     color: white;
     text-align: center;
 }
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+
 
 nav {
     display: flex;
@@ -54,6 +70,58 @@ nav {
 
 .logo {
     height: 40px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        z-index: 1001;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1001;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 20px 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+        z-index: 1000;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 20px;
+        width: 100%;
+    }
+
+    #menu-toggle:checked~.nav-links {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
 }
 
 .hero-content {
