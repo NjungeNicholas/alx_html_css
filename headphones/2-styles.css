@@ -258,11 +258,9 @@ nav {
 
 .our-results {
     font-family: 'Source Sans Pro', sans-serif;
-    position: relative;
     background-image: url('assets/images/headphones_hero_2.jpg');
     background-size: cover;
     background-position: center;
-    height: 100vh;
     color: white;
     text-align: center;
 }
@@ -279,6 +277,7 @@ nav {
 
 .our-results h2 {
     font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .our-results p {
