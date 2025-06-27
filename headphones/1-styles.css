@@ -1,0 +1,252 @@
+@font-face {
+    font-family: 'Source Sans Pro';
+    src: url('assets/fonts/source-sans-pro/SourceSansPro-Black.otf') format('.otf')
+}
+
+@font-face {
+    font-family: 'Spin Cycle OT';
+    src: url('assets/fonts/Spin-Cycle-OT/spincycle_ot.otf') format('.otf')
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.hero-piece {
+    position: relative;
+    background-image: url('assets/images/headphones_hero_1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    color: white;
+    text-align: center;
+}
+
+/* Hide checkbox */
+#menu-toggle {
+    display: none;
+}
+
+/* Hamburger icon */
+.hamburger {
+    display: none;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 20px;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 400;
+}
+
+.nav-links a:hover {
+    color: #ff6565;
+}
+
+.logo {
+    height: 40px;
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .hamburger {
+        display: block;
+        z-index: 1001;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .logo {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1001;
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+        padding: 20px 0;
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.3s ease;
+    }
+
+    .nav-links li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-links a {
+        display: block;
+        padding: 15px 20px;
+        width: 100%;
+    }
+
+    #menu-toggle:checked~.nav-links {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+    }
+
+    
+}
+
+.hero-content {
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px 20px;
+}
+
+.hero-content h1 {
+    font-size: 2rem;
+}
+
+.hero-content p {
+    margin-bottom: 50px;
+}
+
+.hero-content button {
+    background-color: #ff6565;
+    border: none;
+    color: white;
+    font-weight: bold;
+    padding: 15px 30px;
+    font-size: 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    align-self: center;
+}
+
+.hero-content button:hover {
+    opacity: 0.9;
+}
+
+.hero-text {
+    margin-top: 30px;
+    max-width: 800px;
+    font-size: 1rem;
+}
+
+#what-we-do {
+    background-color: #ffffff;
+    padding-bottom: 100px;
+}
+
+.what-we-do {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 110px 50px 50px 50px;
+}
+
+.what-we-do h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.what-we-do p {
+    margin-top: 30px;
+    max-width: 800px;
+    font-size: 1rem;
+}
+
+.services {
+    font-family: 'Source Sans Pro', sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+.service-item h3 {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.service-item p {
+    text-align: center;
+    justify-self: center;
+}
+
+.service-icon {
+    font-size: 100px;
+    color: #ff6565;
+    margin: 20px;
+}
+
+@media (max-width: 480px) {
+    .hero-content {
+        margin-top: 170px;
+    }
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+    .service-item {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px 0;
+        margin: 10px 0;
+    }
+}
+@media (min-width: 480px) and (max-width: 768px) {
+    .services {
+        flex-direction: row;
+    }
+    .service-item {
+        flex: 0 0 calc(50% - 10px);
+    }
+}
+
+@media (min-width: 769px) {
+    .services {
+        flex-direction: row;
+    }
+    .service-item {
+        flex: 1;
+    }
+}
